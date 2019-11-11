@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #F0F0F0;
+}
+
+button, input[type="button"], select, input[type="number"] {
+  outline: none;
+}
+
+.wrapper {
+  padding: 16px 16px 0 16px;
+}
