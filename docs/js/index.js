@@ -37,3 +37,13 @@ function closeNav() {
 
 // Sortable.create(brands, { /* options */ });
 Sortable.create(brands);
+
+/**
+ * Date Range Picker jQuery Plugin
+ * @author: Joshua Commey
+ */
+document.querySelectorAll(".datepicker").forEach((element, index) => {
+	$(element).daterangepicker({
+		showDropdowns: true
+	});
+})
