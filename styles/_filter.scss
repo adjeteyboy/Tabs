@@ -18,6 +18,7 @@
     background: #fff;
     border-radius: 2px;
     color: #76949D;
+    
     & .fa-bars {
       transform: scale(1.2);
     }
@@ -128,6 +129,10 @@
     margin-bottom: 1rem;
     width: 756px;
     margin: 0;
+    margin-bottom: 19px;
+    @media (min-width: 1200px) {
+      margin-top: 16px;
+    }
   }
 
   & #sideNav--btn {
@@ -135,6 +140,9 @@
     background: #fff;
     border-radius: 2px;
     color: #76949D;
+    @media (min-width: 1200px) {
+      display: none;
+    }
     & .fa-bars {
       transform: scale(1.2);
     }
@@ -190,7 +198,9 @@
     }
 
     #desktop-filter__orientation-switch--text { 
-      font-size: 6px;
+      font-size: 7px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
       color: #4E6C75;
     }
   }
@@ -198,6 +208,7 @@
   & #desktop-filter--middle-row {
     display: flex;
     width: 756px;
+    margin-bottom: 16px;
 
     & #desktop-filter__modal--category {
       width: 153px;
@@ -211,7 +222,8 @@
       font-size: 12px;
       line-height: 14px;
       color: #44626B;
-      
+      margin-right: 10px;
+      padding-left: 3px;
     }
 
     & #desktop-filter__modal--filter-options {
@@ -226,6 +238,8 @@
       box-shadow: 0px 1px 1px rgba(217, 224, 225, 0.25);
       width: 114px;
       height: 30px;
+      margin-right: 9px;
+      padding-left: 3px;
     }
 
     & .desktop-filter__modal--month-selector {
@@ -243,11 +257,18 @@
         font-size: 12px;
         line-height: 14px;
         color: #44626B;
+        margin-right: 4px;
+        padding-left: 3px;
       }
 
       & #desktop-filter__modal--year {
         width: 65px;
         height: 30px;
+        background: #FFFFFF;
+        border: 1px solid #D9E0E1;
+        box-sizing: border-box;
+        box-shadow: 0px 1px 1px rgba(217, 224, 225, 0.25);
+        margin-right: 14px;
       }
     }
 
@@ -263,17 +284,20 @@
       font-size: 10px;
       line-height: 12px;
       color: #44626B;
+      margin-right: 33px;
       display: flex;
       align-items: center;
+      justify-content: center;
+
+      &>.fa-calendar-alt {
+        margin-right: 8px;
+      }
     }
 
-    & #desktop-filter__modal--submit-btn {
-      border: none;
+    & #desktop-filter__submit-btn {
       width: 62px;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 14px;
+      height: 30px;
+      border: none;
       color: #FFFFFF;
       background: #36757E;
       border: 1px solid #7FBFC8;
@@ -302,4 +326,9 @@
   //   }
   // }
 
+  & hr {
+    border: 0;
+    width: 758px;
+    border-top: 1px solid #C8CACA;
+  }
 }

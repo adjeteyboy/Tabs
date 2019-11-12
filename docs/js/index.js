@@ -30,7 +30,10 @@ function closeNav() {
 }
 
 
-$('#brands').sortable({
-  containment: 'parent',
-  cursor: 'grabbing'
-});
+// $('#brands').sortable({
+//   containment: 'parent',
+//   cursor: 'grabbing'
+// });
+
+// Sortable.create(brands, { /* options */ });
+Sortable.create(brands);

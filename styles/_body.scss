@@ -7,6 +7,12 @@
 body {
   font-family: 'Roboto', sans-serif;
   background: #F0F0F0;
+
+  @media(min-width: 1200px) {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    grid-template-areas: "sideNav mainContent";
+  }
 }
 
 button, input[type="button"], select, input[type="number"] {

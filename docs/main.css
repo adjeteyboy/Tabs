@@ -353,6 +353,16 @@ body {
   background: #F0F0F0;
 }
 
+@media (min-width: 1200px) {
+  body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 340px 1fr;
+        grid-template-columns: 340px 1fr;
+        grid-template-areas: "sideNav mainContent";
+  }
+}
+
 button, input[type="button"], select, input[type="number"] {
   outline: none;
 }
@@ -529,6 +539,13 @@ button, input[type="button"], select, input[type="number"] {
   margin-bottom: 1rem;
   width: 756px;
   margin: 0;
+  margin-bottom: 19px;
+}
+
+@media (min-width: 1200px) {
+  #desktop-filter #desktop-filter--top-row {
+    margin-top: 16px;
+  }
 }
 
 #desktop-filter #sideNav--btn {
@@ -536,6 +553,12 @@ button, input[type="button"], select, input[type="number"] {
   background: #fff;
   border-radius: 2px;
   color: #76949D;
+}
+
+@media (min-width: 1200px) {
+  #desktop-filter #sideNav--btn {
+    display: none;
+  }
 }
 
 #desktop-filter #sideNav--btn .fa-bars {
@@ -606,7 +629,9 @@ button, input[type="button"], select, input[type="number"] {
 }
 
 #desktop-filter #desktop-filter__orientation-switch #desktop-filter__orientation-switch--text {
-  font-size: 6px;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   color: #4E6C75;
 }
 
@@ -615,6 +640,7 @@ button, input[type="button"], select, input[type="number"] {
   display: -ms-flexbox;
   display: flex;
   width: 756px;
+  margin-bottom: 16px;
 }
 
 #desktop-filter #desktop-filter--middle-row #desktop-filter__modal--category {
@@ -631,6 +657,8 @@ button, input[type="button"], select, input[type="number"] {
   font-size: 12px;
   line-height: 14px;
   color: #44626B;
+  margin-right: 10px;
+  padding-left: 3px;
 }
 
 #desktop-filter #desktop-filter--middle-row #desktop-filter__modal--filter-options {
@@ -647,6 +675,8 @@ button, input[type="button"], select, input[type="number"] {
           box-shadow: 0px 1px 1px rgba(217, 224, 225, 0.25);
   width: 114px;
   height: 30px;
+  margin-right: 9px;
+  padding-left: 3px;
 }
 
 #desktop-filter #desktop-filter--middle-row .desktop-filter__modal--month-selector {
@@ -669,11 +699,20 @@ button, input[type="button"], select, input[type="number"] {
   font-size: 12px;
   line-height: 14px;
   color: #44626B;
+  margin-right: 4px;
+  padding-left: 3px;
 }
 
 #desktop-filter #desktop-filter--middle-row .desktop-filter__modal--month-selector #desktop-filter__modal--year {
   width: 65px;
   height: 30px;
+  background: #FFFFFF;
+  border: 1px solid #D9E0E1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 1px 1px rgba(217, 224, 225, 0.25);
+          box-shadow: 0px 1px 1px rgba(217, 224, 225, 0.25);
+  margin-right: 14px;
 }
 
 #desktop-filter #desktop-filter--middle-row #desktop-filter__modal--date-range {
@@ -690,21 +729,26 @@ button, input[type="button"], select, input[type="number"] {
   font-size: 10px;
   line-height: 12px;
   color: #44626B;
+  margin-right: 33px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#desktop-filter #desktop-filter--middle-row #desktop-filter__modal--submit-btn {
-  border: none;
+#desktop-filter #desktop-filter--middle-row #desktop-filter__modal--date-range > .fa-calendar-alt {
+  margin-right: 8px;
+}
+
+#desktop-filter #desktop-filter--middle-row #desktop-filter__submit-btn {
   width: 62px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
+  height: 30px;
+  border: none;
   color: #FFFFFF;
   background: #36757E;
   border: 1px solid #7FBFC8;
@@ -715,6 +759,25 @@ button, input[type="button"], select, input[type="number"] {
   border-radius: 4px;
 }
 
+#desktop-filter hr {
+  border: 0;
+  width: 758px;
+  border-top: 1px solid #C8CACA;
+}
+
+@media (min-width: 1200px) {
+  #mainContent--container {
+    grid-area: mainContent;
+    margin-left: 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #main-content {
+    margin-left: -16px;
+  }
+}
+
 #main-content p#main-content--current-date {
   font-style: normal;
   font-weight: bold;
@@ -723,12 +786,25 @@ button, input[type="button"], select, input[type="number"] {
   color: #76949D;
 }
 
+@media (min-width: 1200px) {
+  #main-content p#main-content--current-date {
+    font-size: 12px;
+    margin-top: 9px;
+  }
+}
+
 #main-content p#main-content--current-date strong {
   color: #44626B;
 }
 
 #main-content #brands {
   margin-top: 16px;
+}
+
+@media (min-width: 1200px) {
+  #main-content #brands {
+    margin-top: 36px;
+  }
 }
 
 #main-content .brand {
@@ -889,6 +965,13 @@ button, input[type="button"], select, input[type="number"] {
   background: #323237;
 }
 
+@media (min-width: 1200px) {
+  #sideNav {
+    grid-area: sideNav;
+    width: 340px;
+  }
+}
+
 #sideNav .closebtn {
   position: absolute;
   top: 70px;
@@ -897,6 +980,12 @@ button, input[type="button"], select, input[type="number"] {
   right: 16px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+@media (min-width: 1200px) {
+  #sideNav .closebtn {
+    display: none;
+  }
 }
 
 #sideNav #company-logo {

@@ -1,17 +1,36 @@
+#mainContent--container {
+  @media (min-width: 1200px) {
+    grid-area: mainContent;
+    margin-left: 100px;
+  }
+}
+
 #main-content {
+  // margin-left: 0;
+  @media (min-width: 1200px) {
+    margin-left: -16px;
+  }
   p#main-content--current-date {
     font-style: normal;
     font-weight: bold;
     font-size: 10px;
     line-height: 12px;
     color: #76949D;
+    @media (min-width: 1200px) {
+      font-size: 12px;
+      margin-top: 9px;
+    }
     & strong {
       color: #44626B;
     }
+
   }
 
   #brands {
     margin-top: 16px;
+    @media (min-width: 1200px) {
+      margin-top: 36px;
+    }
   }
 
   & .brand {
