@@ -1,0 +1,121 @@
+#addBrand-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .5);
+  bottom: 0;
+  z-index: 2;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  & #addBrand-modal--container {
+    // display: flex;
+    width: 160px;
+    background: #fff;
+    box-shadow: 0px 4px 4px rgba(217, 224, 225, 0.25);
+  }
+
+  & h6 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    color: #A0A0A0;
+    text-align: center;
+    margin: 8px 0 12px 0;
+  }
+  
+  & ul#addBrand-modal--list {
+    list-style: none;
+
+    & .addBrand-modal--list-item {
+      height: 40px;
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      border: 1px solid #F0F0F0;
+
+      & input[type="checkbox"] {
+        opacity: 0;
+        position: absolute;
+        cursor: pointer;
+      }
+
+      & label::before {
+        visibility: visible;
+        content: '';
+        width: 12px;
+        height: 12px;
+        color: #fff;
+        border: 1px solid #36757E;
+        border-radius: 1px;
+        margin-right: 10px;
+        // background: #C8CACA;
+      }
+
+      & input[type="checkbox"]:checked + label::before {
+        background: #36757E;
+        font-family: "Font Awesome 5 Free";
+        content: '\f00c';
+        font-weight: 900; 
+        font-size: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      & input[type="checkbox"]:focus + label::before {
+        // box-shadow: 0px 0px 20px black;
+        box-shadow: 0px 0px 5px rgb(110, 129, 136);
+        
+      }
+
+      & input[type="checkbox"]:disabled + label {
+        color: #C8CACA;
+      }
+      & input[type="checkbox"]:disabled + label::before {
+        background: #C8CACA;
+        border: 1px solid #C8CACA;
+        font-family: "Font Awesome 5 Free";
+        content: '\f00c';
+        font-weight: 900; 
+        font-size: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      & label {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 15px;
+        color: #698489;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  & #addBrand-modal--add-btn {
+    margin-top: 22px;
+    margin-left: auto;
+    display: block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 59px;
+    height: 21px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    color: #FFFFFF;
+    border: 0;
+    background: #36757E;
+    border-radius: 2px;
+  }
+}

@@ -58,12 +58,12 @@
     width: 50px;
     height: 30px;
     background: #FFFFFF;
-    // border: 0;
     outline: none;
     border: 1px solid #D9E0E1;
     box-sizing: border-box;
     box-shadow: 0px 1px 1px rgba(217, 224, 225, 0.25);
     border-radius: 2px;
+    display: none;
     cursor: pointer;
     &:focus {border-color: darken(#D9E0E1, 10%);}
     // &:hover {box-shadow: 0px 4px 4px rgba(217, 224, 225, 0.25);}
@@ -73,6 +73,11 @@
       margin-top: 2px;
       height: 11px; 
       margin-bottom: 5px; 
+      transition: all .4s ease-in-out;
+      &.rotated {
+        transform: rotate(90deg);
+        margin-top: 4px;
+      }
     }
 
     #mobile-filter__orientation-switch--text { 
@@ -121,6 +126,11 @@
 
 #desktop-filter {
   @media(max-width: 799px) {display:none;}
+  margin-left: 30px;
+  margin-top: 16px;
+  @media(min-width: 1200px) {
+    margin-left: 0;
+  }
 
   & #desktop-filter--top-row {
     display: flex;
@@ -140,15 +150,22 @@
     background: #fff;
     border-radius: 2px;
     color: #76949D;
+    @media(min-width: 800px){
+      position: absolute;
+      left: 3px;
+      top: 16px;
+    }
     @media (min-width: 1200px) {
       display: none;
     }
+
     & .fa-bars {
       transform: scale(1.2);
     }
   }
 
   & #desktop-filter__add-brand {
+    cursor: pointer;
     width: 117px;
     height: 30px;
     background: #36757E;
@@ -157,7 +174,7 @@
     box-shadow: 0px 1px 1px rgba(217, 224, 225, 0.25);
     border-radius: 4px;
     color: #fff;
-    // &:focus {border-color: darken(#7FBFC8, 20%);}
+    &:hover {background: darken(#36757E, 10%);}
 
     & .fa-plus {
       font-size: 12px;
@@ -195,6 +212,11 @@
       margin-top: 2px;
       height: 11px; 
       margin-bottom: 5px; 
+      transition: all .3s ease-in-out;
+      &.rotated {
+        transform: rotate(90deg);
+        margin-top: 4px;
+      }
     }
 
     #desktop-filter__orientation-switch--text { 
@@ -292,6 +314,18 @@
       &>.fa-calendar-alt {
         margin-right: 8px;
       }
+
+      &>input.datepicker {
+        border: 0;
+        width: 80%;
+        height: 100%;
+        display: inline-block;
+        cursor: pointer;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;  
+        color: #44626B;
+      }
     }
 
     & #desktop-filter__submit-btn {
@@ -304,6 +338,13 @@
       box-sizing: border-box;
       box-shadow: 0px 1px 1px rgba(217, 224, 225, 0.25);
       border-radius: 4px;
+      cursor:pointer;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.04em;
+      &:hover {background: darken(#36757E, 10%)}
     }
   }
 

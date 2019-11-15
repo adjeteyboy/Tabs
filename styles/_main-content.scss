@@ -2,6 +2,7 @@
   @media (min-width: 1200px) {
     grid-area: mainContent;
     margin-left: 100px;
+    overflow-x: hidden;
   }
 }
 
@@ -28,6 +29,10 @@
 
   #brands {
     margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
     @media (min-width: 1200px) {
       margin-top: 36px;
     }
@@ -35,14 +40,17 @@
 
   & .brand {
     width: 100%;
-    max-width: 600px;
-    height: 200px;
+    max-width: 800px;
+    min-height: 200px;
+    height: 250px;
     background: #FFFFFF;
     border: 1px solid #D9E0E1;
     box-sizing: border-box;
     box-shadow: 0px 1px 1px rgba(217, 224, 225, 0.25);
     padding: 8px 0 0 8px;
     margin-bottom: 8px;
+    position: relative;
+
 
     & .brand--title {
       font-style: normal;
@@ -51,8 +59,77 @@
       line-height: 16px;
       color: #91ACB1;
     }
+
+    &>.brand-grip {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      color: #91ACB1;
+      cursor: pointer;
+      font-size: 20px;
+      bottom: 4px;
+      background: #fff;
+      transition: transform .3s ease;
+      &:hover {
+        color: darken(#91ACB1, 10%);
+        transform: scale(1.2);
+      }
+    }
+
+    .brand--canvas-container {
+      // display: grid;
+      // grid-template-columns: 2fr 2fr 1fr;
+      // height: 90%;
+      // row-gap: 15px;
+      // justify-content: center;
+      // align-items: center;
+      // background: #f3f7f8;
+      // margin-right: 10px;
+      // column-gap: 20px;
+      display: flex;
+      height: 90%;
+      overflow-x: auto;
+      align-items: center;
+      margin-right: 10px;
+      background: #f3f7f8;
+
+      &>* {
+        flex: 0 0 auto;
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+
+      & .brand--canvas-texts {
+        color: #36757e;
+        & li {
+          font-size: 10px;
+          width: 150px;
+        }
+      }
+    }
   }
 }
+
+.rotatedDivContainer {
+  height: 500px;
+  overflow: auto;
+  flex-direction: row;
+}
+
+.rotatedChild {
+  margin-right: 20px;
+  min-height: 200px;
+  height: 90% !important;
+  flex: 0 0 auto;
+  width: 400px !important;
+}
+
+.inColumn {
+  // grid-template-rows: 2fr 2fr 1fr;
+  // grid-template-columns: auto !important;
+  flex-direction: column;
+}
+
 
 #mobile-filter__modal {
   position: fixed;
@@ -122,17 +199,23 @@
     box-sizing: border-box;
     box-shadow: 0px 1px 1px rgba(217, 224, 225, 0.25);
     width: 220px;
-    padding: 9px 0;
+    // padding: 9px 0;
 
     & .fa-calendar-alt {
       margin-right: 8px;
     }
 
-    p {
+    input {
       font-style: normal;
       font-weight: bold;
       font-size: 10px;
       line-height: 12px;
+      color: #44626B;
+      border: 0;
+      width: 80%;
+      height: 100%;
+      display: inline-flex;
+      padding: 9px 0;
     }
   }
 
